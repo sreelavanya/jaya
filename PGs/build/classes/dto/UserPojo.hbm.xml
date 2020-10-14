@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="dto.UserPojo" table="user">
+
+		<id name="u_id">
+			<generator class="increment" />
+		</id>
+		<property name="u_name" />
+		<property name="u_email" />
+		<property name="u_password" />
+		<property name="u_mobile" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="dto.PgDetailsPojo" table="pgdetails">
+
+		<id name="pg_id">
+			<generator class="increment" />
+		</id>
+		<property name="pg_name" />
+		<property name="area_id"/>
+		<property name="address1"/>
+		<property name="address2"/>
+		<property name="pg_description"/>
+		<property name="pg_star_rating"/>
+		
+		
+		<many-to-one name="area" class="dto.AreaPojo" cascade="all" column="area_id" />
+
+	</class>
+</hibernate-mapping>
